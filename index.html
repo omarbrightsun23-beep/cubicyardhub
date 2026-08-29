@@ -1,290 +1,94 @@
-<!doctype html>
-<html lang="en" class="scroll-smooth">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CubicYardHub — Material & Takeoff Calculator</title>
-    <meta name="description" content="Universal cubic yard, tonnage, retail bag count, and vehicle hauling payload safety takeoff calculator for concrete, gravel, dirt, sand, and landscaping." />
-    <meta property="og:title" content="CubicYardHub — Material & Takeoff Calculator" />
-    <meta property="og:description" content="Universal cubic yard, tonnage, retail bag count, and vehicle hauling payload safety takeoff calculator for concrete, gravel, dirt, sand, and landscaping." />
-    <meta property="og:type" content="website" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <!-- Favicons & App Icons -->
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="manifest" href="/site.webmanifest" />
-    <meta name="theme-color" content="#003865" />
-    <script>
-      // Safeguard for iframe environment to ensure window.fetch is writable and has a setter
-      (function() {
-        try {
-          var _fetch = window.fetch;
-          Object.defineProperty(window, 'fetch', {
-            get: function() {
-              return _fetch;
-            },
-            set: function(val) {
-              _fetch = val;
-            },
-            configurable: true,
-            enumerable: true
-          });
-        } catch (e) {
-          // ignore if already non-configurable
-        }
-      })();
-    </script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "WebApplication",
-          "@id": "https://cubicyardhub.com/#webapp",
-          "name": "CubicYardHub Takeoff Engine",
-          "applicationCategory": "ConstructionApplication",
-          "operatingSystem": "All modern web browsers",
-          "url": "https://cubicyardhub.com",
-          "description": "Universal cubic yard, tonnage, retail bag count, and vehicle hauling payload safety takeoff calculator for concrete, gravel, dirt, sand, and landscaping.",
-          "author": {
-            "@type": "Organization",
-            "@id": "https://cubicyardhub.com/#organization",
-            "name": "CubicYardHub Engineering",
-            "url": "https://cubicyardhub.com",
-            "logo": "https://cubicyardhub.com/logo-brand.svg",
-            "contactPoint": {
-              "@type": "ContactPoint",
-              "email": "support@cubicyardhub.com",
-              "contactType": "customer service"
-            }
-          }
-        },
-        {
-          "@type": "FAQPage",
-          "@id": "https://cubicyardhub.com/#faq",
-          "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "How big is a cubic yard?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "A cubic yard is a 3-dimensional cube measuring 3 ft × 3 ft × 3 ft (equal to 27 cubic feet or roughly the size of a standard domestic washing machine). In liquid volume, it is equal to 201.97 US liquid gallons or 764.55 liters."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How to calculate cubic yards?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Cubic Yards = (Length ft × Width ft × Depth ft) ÷ 27. If depth is in inches, divide by 12 first, or multiply Length (ft) × Width (ft) × Depth (in) and divide by 324."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How many yards in a ton?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Depends on material density: for crushed gravel (1.4 t/yd³), 1 ton ≈ 0.71 yd³; for topsoil (1.1 t/yd³), 1 ton ≈ 0.91 yd³; for ready-mix concrete (2.03 t/yd³), 1 ton ≈ 0.49 yd³."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How many cubic yards in a ton?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "For gravel: ≈ 0.71 yd³. For topsoil: ≈ 0.91 yd³. For ready-mix concrete: ≈ 0.49 yd³. For construction sand: ≈ 0.74 yd³. For shredded wood mulch: ≈ 2.50 yd³."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How to calculate cubic inches?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Cubic Inches = Length (in) × Width (in) × Depth (in). 1 cubic foot = 1,728 cubic inches, and 1 cubic yard = 46,656 cubic inches."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How many cubic yards in a tonne?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "A metric tonne (1,000 kg / 2,204.6 lbs) is ≈ 1.102 US short tons. 1 metric tonne of gravel ≈ 0.78 cubic yards."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How many tonnes in a cubic yard?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "One cubic yard of gravel weighs ≈ 1.27 metric tonnes; poured concrete is ≈ 1.84 metric tonnes."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How many tons is in a yard?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Concrete = 2.03 tons; Gravel = 1.40 tons; Sand = 1.35 tons; Topsoil = 1.10 tons; Mulch = 0.40 tons."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "1 ton how many cubic yards?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "1 ton of crushed stone = 0.71 yd³. 1 ton of dirt = 0.91 yd³. 1 ton of poured concrete = 0.49 yd³. 1 ton of sand = 0.74 yd³."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How to calculate cubic yards from square feet?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Cubic Yards = (Square Feet × Depth in Inches) ÷ 324."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How much does a yard of concrete weigh?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Standard poured ready-mix concrete weighs approximately 4,050 lbs (2.03 short tons) per cubic yard."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How much does a yard of gravel weigh?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Standard crushed stone / #57 gravel weighs approximately 2,800 lbs (1.40 short tons) per cubic yard."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How much does a cubic yard of dirt weigh?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Screened dry topsoil weighs 2,000–2,200 lbs (1.0–1.1 tons). Wet or clay fill dirt can exceed 2,600 lbs (1.3 tons)."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How much does a yard of topsoil weigh?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "One cubic yard of screened dry topsoil weighs approximately 2,200 lbs (1.1 tons)."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How much does a yard of mulch weigh?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Dry bark or shredded wood mulch weighs approximately 600–800 lbs (0.3–0.4 tons) per cubic yard."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How much does a yard of sand weigh?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Dry construction / masonry sand weighs approximately 2,600–2,700 lbs (1.30–1.35 tons) per cubic yard."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How much does a yard of concrete cost?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Ready-mix concrete costs average $125 to $175 per cubic yard delivered, with regional variations and short-load fees."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How much is a 10-yard truck of concrete?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "A full 10-yard concrete mixer truckload typically costs between $1,250 and $1,750 delivered."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How many yards of concrete in a truck?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "A standard commercial concrete transit mixer truck holds 8 to 11 cubic yards of concrete."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How much to pave a driveway?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Asphalt paving averages $3 to $7 per sq ft ($3,000–$7,000 for a standard 20×20 ft driveway). Concrete averages $6 to $12 per sq ft."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How much chippings do I need?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Multiply area (sq ft) by spread depth (typically 2''), divide by 324 to get cubic yards, then multiply by 1.4 for tons."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Figure out yards of gravel?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Length (ft) × Width (ft) × (Depth in ÷ 12) ÷ 27 = Cubic Yards. Add 10% for compaction."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How to calculate cubic yards of concrete?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Length (ft) × Width (ft) × Thickness (ft) ÷ 27. For a 10×10 ft slab at 4'' thick = 1.23 yd³."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How many bags of concrete make a cubic yard?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "It takes forty-five (45) 80 lb bags, sixty (60) 60 lb bags, or ninety (90) 40 lb bags to yield 1 cubic yard."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How much extra material should I add for waste?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Add 5% to 10% for concrete slabs and footings, and 10% to 15% for compacted gravel, crushed stone, and topsoil grading."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can a pickup truck haul a cubic yard of gravel?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "No. 1 yard of gravel weighs ≈ 2,800 lbs, which exceeds the standard 1,500–1,800 lb payload limit of a 1/2-ton pickup (e.g. F-150). It requires 2 trips or a 1-ton truck."
-          }
-        }
-      ]
-    }
-    ]
-  }
-  </script>
-  </head>
-  <body class="bg-[#FAF8F2] text-[#2C3138] antialiased selection:bg-[#003865] selection:text-white">
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
-</html>
 
+CY
+CubicYardHub
+Imperial  Calculate ▼
+
+⚡ Free Material & Hauling Estimator
+Cubic Yard Calculator
+Instantly calculate cubic yards, tons, retail bags & truckloads for concrete, gravel, dirt & mulch.
+
+✓ Standard Yard: 27 cu ft
+✓ Payload Warning: Active
+
+1. Select Geometry Shape
+Depth in inches Depth in feet
+■ Rectangle / Slab ● Cylinder / Post ▲ Triangle / Slope ➕ Multi-Area (+)
++ Add another area
+
+Material Preset (calculates tonnage & density) Crushed Stone / Gravel (~1.40 tons/yd³) Ready-Mix Concrete (~2.03 tons/yd³) Screened Topsoil / Dirt (~1.10 tons/yd³) Construction Sand (~1.35 tons/yd³) Bark / Wood Mulch (~0.40 tons/yd³) Hot-Mix Asphalt (~1.95 tons/yd³)
+Price per Cubic Yard — optional ($)
+$
+Waste & Compaction Safety Buffer
+0% Exact +5% (Light) +10% (Rec.) +15% (Heavy)
+
+Volume Results & Material Takeoff
+
+
+Cubic Yards
+2.72
+
+Cubic Feet
+73.44
+
+Estimated Tons
+3.81
+
+Total Cost
+$176.80
+
+Areas Summed: 1
+Cubic Yards + Buffer: 2.72
+Cubic Feet per Yard: 27 cu ft
+
+🛍️ Commercial Bag Purchase Breakdown Standard retail bags
+
+
+50 lb Bags
+152
+
+60 lb Bags
+127
+
+80 lb Bags
+95
+
+🚨 VEHICLE PAYLOAD & HAULING ADVISORY
+Total Weight: 3.81 Tons (7,616 lbs). Exceeds standard 1/2-Ton pickup (F-150) payload capacity (~1,800 lbs).
+➔ Recommendation: Requires 4+ pickup trips OR 1 single-axle dump truck bulk delivery.
+🔗 Copy Share Link 📄 Print Takeoff </> Embed Widget
+
+ADVERTISEMENT
+<!-- Google AdSense Mid-Page Banner (728x90 / Responsive) -->
+
+Cubic Yard Reference Table for Common Projects
+Typical slab, driveway, and fill projects with their cubic feet and cubic yard totals.
+
+Common Project
+Cubic Feet (ft³)
+Cubic Yards (yd³)
+Recommended Depth
+ 
+Slab 10 ft × 10 ft × 4 in
+33.3 ft³
+1.23 yd³
+4" Standard Patio/Shed
+Slab 20 ft × 20 ft × 4 in
+133.3 ft³
+4.94 yd³
+4" 2-Car Garage Floor
+Patio 12 ft × 12 ft × 4 in
+48.0 ft³
+1.78 yd³
+4" Paver Base / Concrete
+Driveway 20 ft × 10 ft × 6 in
+100.0 ft³
+3.70 yd³
+6" Heavy Vehicle Pour
+
+
+ADVERTISEMENT
+<!-- Google AdSense Bottom Leaderboard (Responsive) -->
+
+CubicYardHub.com — Free Takeoff Engine
+Disclaimer HTML Sitemap Privacy Policy Terms of Service
+© 2026 CubicYardHub. All rights reserved.
