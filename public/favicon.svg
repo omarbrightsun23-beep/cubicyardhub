@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!-- Dark Blue Rounded Container -->
+  <rect width="64" height="64" rx="14" fill="#002b4d" />
+  
+  <!-- Isometric 3D Cube -->
+  <!-- Top Face: Construction Amber Gold -->
+  <polygon points="32,10 52,22 32,34 12,22" fill="#FBAF3C" stroke="#F59E0B" stroke-width="0.5" />
+  
+  <!-- Left Face: Midnight / Blueprint Shadow Navy -->
+  <polygon points="12,22 32,34 32,54 12,42" fill="#00182E" stroke="#001222" stroke-width="0.5" />
+  
+  <!-- Right Face: Green Aggregates / Turf Lawn -->
+  <polygon points="32,34 52,22 52,42 32,54" fill="#1BB954" stroke="#169C46" stroke-width="0.5" />
+  
+  <!-- Subtle Center Highlights -->
+  <line x1="32" y1="10" x2="32" y2="34" stroke="rgba(255,255,255,0.25)" stroke-width="1" />
+  <line x1="12" y1="22" x2="32" y2="34" stroke="rgba(255,255,255,0.15)" stroke-width="0.75" />
+  <line x1="52" y1="22" x2="32" y2="34" stroke="rgba(255,255,255,0.3)" stroke-width="0.75" />
+</svg>
