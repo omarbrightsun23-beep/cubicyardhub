@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yards to Tons Calculator — Material Weight & Volume Converter — Free Material Takeoff Calculator</title>
+  <meta name="description" content="Convert cubic yards to tons and tons to cubic yards instantly across crushed stone, dirt, sand, concrete, and asphalt." />
+  <link rel="canonical" href="https://cubicyardcalc.com/converters/yards-to-tons-calculator.html" />
+  <meta property="og:title" content="Yards to Tons Calculator — Material Weight & Volume Converter" />
+  <meta property="og:description" content="Convert cubic yards to tons and tons to cubic yards instantly across crushed stone, dirt, sand, concrete, and asphalt." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://cubicyardcalc.com/converters/yards-to-tons-calculator.html" />
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    .font-mono { font-family: 'JetBrains Mono', monospace; }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Yards to Tons & Tons to Yards Calculator",
+    "operatingSystem": "All",
+    "applicationCategory": "UtilitiesApplication",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "description": "Convert cubic yards to tons and tons to cubic yards instantly across crushed stone, dirt, sand, concrete, and asphalt."
+  }
+  </script>
+</head>
+<body class="bg-[#F8F9FA] text-[#2C3138] min-h-screen flex flex-col">
+
+  
+  <!-- TOP COLOR PALETTE ACCENT STRIP -->
+  <div class="h-1.5 w-full flex">
+    <div class="h-full w-1/6 bg-[#003865]"></div>
+    <div class="h-full w-1/6 bg-[#1BB954]"></div>
+    <div class="h-full w-1/6 bg-[#FBAF3C]"></div>
+    <div class="h-full w-1/6 bg-[#EFE6C8]"></div>
+    <div class="h-full w-1/6 bg-[#828892]"></div>
+    <div class="h-full w-1/6 bg-[#2C3138]"></div>
+  </div>
+
+  <!-- NAVIGATION BAR -->
+  <header class="bg-white border-b border-slate-200 sticky top-0 z-50 px-4 sm:px-8 py-2.5 shadow-sm">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <a href="/index.html" class="flex items-center space-x-2.5">
+        <div class="w-8 h-8 rounded-lg bg-[#003865] flex items-center justify-center font-extrabold text-[#FBAF3C] text-base shadow">CY</div>
+        <div class="text-lg font-bold tracking-tight text-[#2C3138]">CubicYard<span class="text-[#003865]">Hub</span></div>
+      </a>
+      <nav class="hidden xl:flex items-center space-x-5 text-xs font-semibold">
+        <a href="/index.html" class="text-slate-600 hover:text-[#003865] transition pb-1">Cubic Yard Hub</a>
+<a href="/slab-calculator.html" class="text-slate-600 hover:text-[#003865] transition pb-1">Concrete Slabs</a>
+<a href="/footing-calculator.html" class="text-slate-600 hover:text-[#003865] transition pb-1">Footings & Piers</a>
+<a href="/materials/dirt-calculator.html" class="text-slate-600 hover:text-[#003865] transition pb-1">Dirt & Soil</a>
+<a href="/materials/rock-calculator.html" class="text-slate-600 hover:text-[#003865] transition pb-1">Gravel & Rock</a>
+<a href="/materials/sand-calculator.html" class="text-slate-600 hover:text-[#003865] transition pb-1">Sand</a>
+<a href="/driveway-calculator.html" class="text-slate-600 hover:text-[#003865] transition pb-1">Driveway</a>
+<a href="/converters/yards-to-tons-calculator.html" class="text-[#003865] border-b-2 border-[#003865] font-bold pb-1">Yards to Tons</a>
+
+      </nav>
+      <div class="flex items-center space-x-2">
+        <button id="unit-toggle" class="bg-[#EFE6C8] text-[#003865] border border-[#003865]/30 hover:bg-[#e8deb8] px-3 py-1 rounded-md text-xs font-bold transition">
+          Imperial
+        </button>
+        <a href="#calculator" class="bg-[#FBAF3C] hover:bg-[#f0a32d] text-[#2C3138] font-bold px-3.5 py-1 rounded-md text-xs shadow-sm transition">
+          Calculate ▼
+        </a>
+      </div>
+    </div>
+  </header>
+
+
+  <!-- COMPACT HERO BANNER -->
+  <section class="bg-[#003865] text-white py-4 px-4 sm:px-8 shadow-inner">
+    <div class="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2 text-center sm:text-left">
+      <div>
+        <div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-[#EFE6C8] text-[#003865] text-[10px] font-extrabold uppercase tracking-wider mb-1">
+          1,300 Monthly Searches (KD 13%)
+        </div>
+        <h1 class="text-2xl sm:text-3xl font-extrabold tracking-tight text-white leading-tight">
+          Yards to Tons & Tons to Yards Calculator
+        </h1>
+        <p class="text-xs text-[#EFE6C8] mt-0.5">
+          Convert cubic yards to tons and tons to cubic yards instantly across crushed stone, dirt, sand, concrete, and asphalt.
+        </p>
+      </div>
+      <div class="hidden sm:block">
+        <a href="#calculator" class="bg-[#FBAF3C] text-[#2C3138] font-bold px-3.5 py-1.5 rounded-md text-xs shadow">
+          Calculate Below ▼
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CALCULATOR SECTION (Immediately Accessible) -->
+  <section id="calculator" class="max-w-5xl mx-auto px-4 sm:px-6 py-4 flex-grow">
+    <div class="bg-white border-2 border-slate-200 rounded-2xl p-5 sm:p-7 shadow-lg space-y-5">
+      
+      <!-- Shape Tabs -->
+      <div>
+        <div class="flex items-center justify-between mb-2">
+          <label class="block text-xs font-bold uppercase tracking-wider text-slate-500">Project Shape</label>
+          <div class="inline-flex bg-[#F8F9FA] border border-slate-300 rounded-lg p-0.5 text-xs">
+            <button data-depth-toggle="inches" class="bg-[#003865] text-white px-3 py-1 rounded-md font-bold text-xs shadow transition">Depth in inches</button>
+            <button data-depth-toggle="feet" class="text-slate-600 px-3 py-1 rounded-md font-semibold text-xs hover:text-slate-900 transition">Depth in feet</button>
+          </div>
+        </div>
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 bg-[#F8F9FA] p-1.5 rounded-xl border border-slate-200 text-xs">
+          <button data-shape-tab="rectangle" class="bg-[#003865] text-white font-bold shadow-sm py-2 px-3 rounded-lg flex items-center justify-center gap-1.5 transition">
+            <span>■</span> Rectangle / Slab
+          </button>
+          <button data-shape-tab="cylinder" class="text-slate-600 hover:text-slate-900 py-2 px-3 rounded-lg flex items-center justify-center gap-1.5 transition">
+            <span>●</span> Cylinder / Post
+          </button>
+          <button data-shape-tab="triangle" class="text-slate-600 hover:text-slate-900 py-2 px-3 rounded-lg flex items-center justify-center gap-1.5 transition">
+            <span>▲</span> Triangle / Slope
+          </button>
+          <button data-shape-tab="multiarea" class="text-slate-600 hover:text-slate-900 py-2 px-3 rounded-lg flex items-center justify-center gap-1.5 transition">
+            <span>➕</span> Multi-Area (+)
+          </button>
+        </div>
+      </div>
+
+      <!-- Areas Container -->
+      <div id="areas-container"></div>
+
+      <!-- Add Area Button -->
+      <div>
+        <button id="add-area-btn" class="bg-[#EFE6C8] hover:bg-[#e4d8b0] text-[#003865] border border-[#003865] font-bold text-xs px-3.5 py-1.5 rounded-lg transition shadow-sm">
+          + Add another section
+        </button>
+      </div>
+
+      <!-- Material & Price Inputs -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-3 border-t border-slate-200">
+        <div>
+          <label class="block text-xs font-bold text-[#2C3138] mb-1">Material Preset</label>
+          <select id="material-select" class="w-full bg-white border border-slate-300 rounded-lg px-3 py-2 text-sm font-semibold text-slate-800 focus:border-[#003865] focus:outline-none">
+            <option value="gravel" selected>Crushed Stone / Gravel (~1.40 tons/yd³)</option>
+            <option value="concrete" >Ready-Mix Concrete (~2.03 tons/yd³)</option>
+            <option value="dirt" >Screened Topsoil / Dirt (~1.10 tons/yd³)</option>
+            <option value="sand" >Construction Sand (~1.35 tons/yd³)</option>
+            <option value="mulch" >Bark / Wood Mulch (~0.40 tons/yd³)</option>
+            <option value="asphalt" >Hot-Mix Asphalt (~1.95 tons/yd³)</option>
+          </select>
+        </div>
+        <div>
+          <label class="block text-xs font-bold text-[#2C3138] mb-1">Price per Cubic Yard ($)</label>
+          <div class="relative flex items-center">
+            <span class="absolute left-3 text-slate-400 text-sm font-bold">$</span>
+            <input type="number" step="any" id="price-input" value="50.00" class="w-full bg-white border border-slate-300 rounded-lg pl-8 pr-4 py-2 text-sm font-bold text-slate-800 focus:border-[#003865] focus:outline-none" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Waste Buffer -->
+      <div>
+        <label class="block text-xs font-bold text-[#2C3138] mb-1.5">Waste & Compaction Buffer</label>
+        <div class="grid grid-cols-4 gap-2 text-center text-xs">
+          <button data-waste-btn="0" class="bg-white border border-slate-300 py-1.5 rounded-lg text-slate-600 font-semibold">0% Exact</button>
+          <button data-waste-btn="5" class="bg-white border border-slate-300 py-1.5 rounded-lg text-slate-600 font-semibold">+5% (Light)</button>
+          <button data-waste-btn="10" class="bg-[#EFE6C8] border-2 border-[#003865] py-1.5 rounded-lg text-[#003865] font-bold shadow-sm">+10% (Rec.)</button>
+          <button data-waste-btn="15" class="bg-white border border-slate-300 py-1.5 rounded-lg text-slate-600 font-semibold">+15% (Heavy)</button>
+        </div>
+      </div>
+
+      <!-- VOLUME RESULTS -->
+      <div class="pt-3 border-t-2 border-slate-200 space-y-3">
+        <div class="text-xs font-extrabold uppercase tracking-wider text-[#003865]">Estimated Volume & Takeoff</div>
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-3">
+          <div class="bg-[#003865] rounded-xl p-3.5 text-center text-white shadow-md">
+            <div class="text-[10px] font-bold uppercase tracking-wider text-[#EFE6C8]">Cubic Yards</div>
+            <div id="res-cubic-yards" class="text-3xl font-black font-mono mt-0.5 text-[#FBAF3C]">0.00</div>
+          </div>
+          <div class="bg-white border-2 border-slate-200 rounded-xl p-3.5 text-center shadow-sm">
+            <div class="text-[10px] font-bold uppercase tracking-wider text-[#828892]">Cubic Feet</div>
+            <div id="res-cubic-feet" class="text-3xl font-black font-mono mt-0.5 text-[#003865]">0.00</div>
+          </div>
+          <div class="bg-white border-2 border-slate-200 rounded-xl p-3.5 text-center shadow-sm">
+            <div class="text-[10px] font-bold uppercase tracking-wider text-[#828892]">Estimated Tons</div>
+            <div id="res-tons" class="text-3xl font-black font-mono mt-0.5 text-[#2C3138]">0.00</div>
+          </div>
+          <div class="bg-[#F0FDF4] border-2 border-[#1BB954] rounded-xl p-3.5 text-center shadow-sm">
+            <div class="text-[10px] font-bold uppercase tracking-wider text-[#828892]">Total Cost</div>
+            <div id="res-total-cost" class="text-3xl font-black font-mono mt-0.5 text-[#1BB954]">$0.00</div>
+          </div>
+        </div>
+
+        <!-- Bags -->
+        <div class="bg-white border border-slate-200 rounded-xl p-3.5 space-y-1.5">
+          <div class="text-xs font-bold text-[#2C3138]">🛍️ Retail Bag Equivalent Quantities</div>
+          <div class="grid grid-cols-3 gap-2.5 text-center">
+            <div class="bg-[#F8F9FA] border border-slate-200 rounded-lg p-2">
+              <div class="text-[10px] text-slate-500 uppercase font-semibold">50 lb Bags</div>
+              <div id="bag-50-count" class="text-base font-bold text-[#003865] font-mono">0</div>
+            </div>
+            <div class="bg-[#F8F9FA] border border-slate-200 rounded-lg p-2">
+              <div class="text-[10px] text-slate-500 uppercase font-semibold">60 lb Bags</div>
+              <div id="bag-60-count" class="text-base font-bold text-[#003865] font-mono">0</div>
+            </div>
+            <div class="bg-[#F8F9FA] border border-slate-200 rounded-lg p-2">
+              <div class="text-[10px] text-slate-500 uppercase font-semibold">80 lb Bags</div>
+              <div id="bag-80-count" class="text-base font-bold text-[#003865] font-mono">0</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hauling Alert -->
+        <div id="hauling-alert-box" class="bg-amber-50 border-2 border-amber-400 rounded-xl p-3.5 text-xs shadow-sm space-y-0.5">
+          <div id="hauling-alert-title" class="text-amber-900 font-bold flex items-center gap-1.5 text-sm">
+            <span>🚨</span> VEHICLE PAYLOAD & HAULING ADVISORY
+          </div>
+          <p id="hauling-alert-desc" class="text-slate-800 leading-relaxed font-medium">Calculating load weight...</p>
+          <div id="hauling-alert-rec" class="text-amber-800 font-bold pt-0.5"></div>
+        </div>
+
+        <!-- Utility Buttons -->
+        <div class="grid grid-cols-3 gap-2.5 pt-1">
+          <button id="share-btn" class="bg-[#FBAF3C] hover:bg-[#f0a32d] text-[#2C3138] font-bold py-2 rounded-lg text-xs flex items-center justify-center gap-1 shadow-sm transition">
+            🔗 Copy Share Link
+          </button>
+          <button id="print-btn" class="bg-slate-100 hover:bg-slate-200 text-[#003865] border border-slate-300 font-bold py-2 rounded-lg text-xs flex items-center justify-center gap-1 transition">
+            📄 Print Takeoff
+          </button>
+          <button id="embed-btn" class="bg-slate-100 hover:bg-slate-200 text-[#003865] border border-slate-300 font-bold py-2 rounded-lg text-xs flex items-center justify-center gap-1 transition">
+            &lt;/&gt; Embed Widget
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  
+  <!-- GOOGLE ADSENSE MID-CONTENT IN-FEED BANNER (Responsive) -->
+  <div class="my-8 max-w-5xl mx-auto px-4">
+    <div class="bg-slate-50 border border-dashed border-slate-300 rounded-xl p-4 text-center min-h-[100px] flex flex-col items-center justify-center relative overflow-hidden shadow-sm">
+      <span class="text-[10px] uppercase font-bold tracking-widest text-slate-400 mb-1">ADVERTISEMENT</span>
+      <div class="text-xs text-slate-400 font-mono">&lt;!-- Google AdSense Mid-Page Banner (728x90 / Responsive) --&gt;</div>
+    </div>
+  </div>
+  <!-- END GOOGLE ADSENSE MID-CONTENT BANNER -->
+
+
+  <!-- LONG SEO CONTENT SECTION -->
+  <section class="max-w-5xl mx-auto px-4 sm:px-6 py-6 space-y-6">
+    
+    <div class="bg-white border border-slate-200 rounded-xl p-6 shadow-sm space-y-4 text-xs sm:text-sm text-slate-700 leading-relaxed">
+      <h2 class="text-xl font-bold text-[#003865]">Yards to Tons Conversion Constants</h2>
+      <p>Gravel: 1 yd³ = 1.40 tons. Concrete: 1 yd³ = 2.03 tons. Dirt: 1 yd³ = 1.10 tons.</p>
+    </div>
+    
+  </section>
+
+  
+  <!-- GOOGLE ADSENSE BOTTOM BANNER (Just Above Footer) -->
+  <div class="my-8 max-w-5xl mx-auto px-4">
+    <div class="bg-slate-50 border border-dashed border-slate-300 rounded-xl p-4 text-center min-h-[90px] flex flex-col items-center justify-center relative overflow-hidden shadow-sm">
+      <span class="text-[10px] uppercase font-bold tracking-widest text-slate-400 mb-1">ADVERTISEMENT</span>
+      <div class="text-xs text-slate-400 font-mono">&lt;!-- Google AdSense Bottom Leaderboard (Responsive) --&gt;</div>
+    </div>
+  </div>
+  <!-- END GOOGLE ADSENSE BOTTOM BANNER -->
+
+  
+  <!-- FOOTER -->
+  <footer class="bg-[#003865] text-slate-200 pt-12 pb-10 border-t-4 border-[#FBAF3C] mt-auto">
+    <div class="max-w-7xl mx-auto px-6 sm:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-5 gap-8 pb-10 border-b border-slate-700">
+        <div class="md:col-span-1">
+          <div class="flex items-center space-x-3 mb-3">
+            <div class="w-8 h-8 rounded-lg bg-white flex items-center justify-center font-extrabold text-[#003865] text-base">CY</div>
+            <span class="text-xl font-bold text-white tracking-tight">CubicYard<span class="text-[#FBAF3C]">Hub</span></span>
+          </div>
+          <p class="text-xs text-[#EFE6C8] leading-relaxed mb-3">
+            Professional volume takeoff, tonnage conversion, and hauling payload safety engine for landscape and construction projects.
+          </p>
+          <div class="text-[11px] text-slate-400">© 2026 CubicYardHub. All rights reserved.</div>
+        </div>
+
+        <div>
+          <h4 class="text-xs font-bold uppercase tracking-wider text-[#FBAF3C] mb-2.5">Bulk Materials (75K Vol)</h4>
+          <ul class="space-y-1.5 text-xs text-slate-300">
+            <li><a href="/materials/dirt-calculator.html" class="hover:text-white transition">Dirt & Topsoil (9.9K)</a></li>
+            <li><a href="/materials/rock-calculator.html" class="hover:text-white transition">Rock & Crushed Stone (9.9K)</a></li>
+            <li><a href="/materials/sand-calculator.html" class="hover:text-white transition">Construction Sand (6.6K)</a></li>
+            <li><a href="/materials/pea-gravel-calculator.html" class="hover:text-white transition">Pea Gravel (4.4K)</a></li>
+            <li><a href="/materials/river-rock-calculator.html" class="hover:text-white transition">River Rock (3.6K)</a></li>
+            <li><a href="/materials/crusher-run-calculator.html" class="hover:text-white transition">Crusher Run (1.0K)</a></li>
+            <li><a href="/materials/mulch-calculator.html" class="hover:text-white transition">Mulch & Bark</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-xs font-bold uppercase tracking-wider text-[#FBAF3C] mb-2.5">Concrete & Masonry (20K Vol)</h4>
+          <ul class="space-y-1.5 text-xs text-slate-300">
+            <li><a href="/slab-calculator.html" class="hover:text-white transition">Concrete Slab Calculator</a></li>
+            <li><a href="/footing-calculator.html" class="hover:text-white transition">Footing & Sonotube (2.4K)</a></li>
+            <li><a href="/concrete-block-calculator.html" class="hover:text-white transition">Concrete Block & CMU (5.4K)</a></li>
+            <li><a href="/fence-post-calculator.html" class="hover:text-white transition">Fence Post Concrete (2.9K)</a></li>
+            <li><a href="/stairs-calculator.html" class="hover:text-white transition">Concrete Steps & Stairs</a></li>
+            <li><a href="/bag-calculator.html" class="hover:text-white transition">Concrete Bag Calculator (80lb)</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-xs font-bold uppercase tracking-wider text-[#FBAF3C] mb-2.5">Cost & Paving (High CPC)</h4>
+          <ul class="space-y-1.5 text-xs text-slate-300">
+            <li><a href="/driveway-calculator.html" class="hover:text-white transition">Concrete Driveway Calculator</a></li>
+            <li><a href="/asphalt-driveway-cost.html" class="hover:text-white transition">Asphalt Driveway Cost ($3.14)</a></li>
+            <li><a href="/cost-calculator.html" class="hover:text-white transition">Ready-Mix Concrete Cost</a></li>
+            <li><a href="/converters/yards-to-tons-calculator.html" class="hover:text-white transition">Yards to Tons Calculator</a></li>
+            <li><a href="/converters/cubic-feet-to-cubic-yards.html" class="hover:text-white transition">Cubic Feet to Cubic Yards</a></li>
+            <li><a href="/converters/square-feet-to-cubic-yards.html" class="hover:text-white transition">Square Feet to Cubic Yards</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-xs font-bold uppercase tracking-wider text-[#FBAF3C] mb-2.5">Trust, Legal & Sitemap</h4>
+          <ul class="space-y-1.5 text-xs text-slate-300">
+            <li><a href="/disclaimer.html" class="hover:text-white transition text-[#FBAF3C] font-semibold">Disclaimer</a></li>
+            <li><a href="/sitemap.html" class="hover:text-white transition text-[#FBAF3C] font-semibold">HTML Sitemap</a></li>
+            <li><a href="/privacy.html" class="hover:text-white transition">Privacy Policy</a></li>
+            <li><a href="/terms.html" class="hover:text-white transition">Terms of Service</a></li>
+            <li><a href="/about.html" class="hover:text-white transition">About Us</a></li>
+            <li><a href="/contact.html" class="hover:text-white transition">Contact & Support</a></li>
+            <li><a href="/sitemap.xml" class="hover:text-white transition">XML Sitemap</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="pt-6 text-center text-[11px] text-slate-400">
+        All calculations are mathematical estimates. Material densities and ready-mix batching vary by region and supplier moisture content.
+      </div>
+    </div>
+  </footer>
+
+
+  <script src="/app.js"></script>
+</body>
+</html>

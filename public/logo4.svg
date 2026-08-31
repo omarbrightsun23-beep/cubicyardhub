@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 100" width="480" height="100">
+  <g transform="translate(15, 12)">
+    <rect width="76" height="76" rx="14" fill="#FAF8F2" stroke="#E2DCB9" stroke-width="2" />
+    <!-- Caliper Arms -->
+    <path d="M 20,24 L 56,24 M 20,24 L 20,56 M 56,24 L 56,56" stroke="#003865" stroke-width="3.5" stroke-linecap="round" fill="none" />
+    <!-- Inner Cube Node -->
+    <polygon points="38,36 50,43 38,50 26,43" fill="#FBAF3C" />
+    <polygon points="26,43 38,50 38,62 26,55" fill="#003865" />
+    <polygon points="38,50 50,43 50,55 38,62" fill="#1BB954" />
+  </g>
+  <text x="110" y="52" font-family="'Plus Jakarta Sans', sans-serif" font-size="30" font-weight="800" fill="#2C3138">CubicYard</text>
+  <text x="268" y="52" font-family="'Plus Jakarta Sans', sans-serif" font-size="30" font-weight="800" fill="#1BB954">Hub</text>
+  <text x="112" y="74" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" font-weight="600" fill="#828892" letter-spacing="1.5">ARCHITECTURAL &amp; CONTRACTOR ESTIMATING</text>
+</svg>

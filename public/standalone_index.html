@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cubic Yard Calculator — Free Instant Material & Volume Takeoff Tool</title>
+  <meta name="description" content="Calculate cubic yards, cubic feet, tons, and retail bag counts instantly for concrete, gravel, dirt, sand, and mulch. Includes dynamic vehicle hauling payload safety alerts." />
+  <link rel="canonical" href="https://cubicyardcalc.com/" />
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    .font-mono { font-family: 'JetBrains Mono', monospace; }
+  </style>
+
+  <!-- Structured Schema Data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Cubic Yard Calculator",
+    "operatingSystem": "All",
+    "applicationCategory": "UtilitiesApplication",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "description": "Universal cubic yard, tonnage, retail bag breakdown, and vehicle payload requirements for construction and landscape materials."
+  }
+  </script>
+</head>
+<body class="bg-[#F8F9FA] text-[#2C3138] min-h-screen flex flex-col antialiased">
+
+  <!-- TOP ACCENT BAR -->
+  <div class="h-1.5 w-full flex">
+    <div class="h-full w-1/6 bg-[#003865]"></div>
+    <div class="h-full w-1/6 bg-[#1BB954]"></div>
+    <div class="h-full w-1/6 bg-[#FBAF3C]"></div>
+    <div class="h-full w-1/6 bg-[#EFE6C8]"></div>
+    <div class="h-full w-1/6 bg-[#828892]"></div>
+    <div class="h-full w-1/6 bg-[#2C3138]"></div>
+  </div>
+
+  <!-- NAVIGATION BAR -->
+  <header class="bg-white border-b border-slate-200 sticky top-0 z-50 px-4 sm:px-8 py-2.5 shadow-sm">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <a href="/" class="flex items-center space-x-2.5">
+        <div class="w-8 h-8 rounded-lg bg-[#003865] flex items-center justify-center font-extrabold text-[#FBAF3C] text-base shadow">CY</div>
+        <div class="text-lg font-bold tracking-tight text-[#2C3138]">CubicYard<span class="text-[#003865]">Hub</span></div>
+      </a>
+      <div class="flex items-center space-x-2">
+        <button id="unit-toggle" class="bg-[#EFE6C8] text-[#003865] border border-[#003865]/30 px-3 py-1 rounded-md text-xs font-bold transition">
+          Imperial
+        </button>
+        <a href="#calculator" class="bg-[#FBAF3C] hover:bg-[#f0a32d] text-[#2C3138] font-bold px-3.5 py-1 rounded-md text-xs shadow-sm transition">
+          Calculate ▼
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- COMPACT STREAMLINED HERO BANNER -->
+  <section class="bg-[#003865] text-white py-4 px-4 sm:px-8 shadow-inner">
+    <div class="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2 text-center sm:text-left">
+      <div>
+        <div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-[#EFE6C8] text-[#003865] text-[10px] font-extrabold uppercase tracking-wider mb-1">
+          ⚡ Free Material & Hauling Estimator
+        </div>
+        <h1 class="text-2xl sm:text-3xl font-extrabold tracking-tight text-white leading-tight">
+          Cubic Yard Calculator
+        </h1>
+        <p class="text-xs text-[#EFE6C8] mt-0.5">
+          Instantly calculate cubic yards, tons, retail bags & truckloads for concrete, gravel, dirt & mulch.
+        </p>
+      </div>
+      <div class="hidden sm:flex items-center gap-3 text-xs">
+        <div class="bg-[#002A4D] border border-[#1BB954] px-3 py-1.5 rounded-lg text-slate-200">
+          <span class="text-[#1BB954] font-bold">✓ Standard Yard:</span> 27 cu ft
+        </div>
+        <div class="bg-[#002A4D] border border-[#FBAF3C] px-3 py-1.5 rounded-lg text-slate-200">
+          <span class="text-[#FBAF3C] font-bold">✓ Payload Warning:</span> Active
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAIN CALCULATOR SECTION -->
+  <section id="calculator" class="max-w-5xl mx-auto px-4 sm:px-6 py-4 flex-grow w-full">
+    <div class="bg-white border-2 border-slate-200 rounded-2xl p-5 sm:p-7 shadow-lg space-y-5">
+      
+      <!-- Shape Tabs -->
+      <div>
+        <div class="flex items-center justify-between mb-2">
+          <label class="block text-xs font-bold uppercase tracking-wider text-slate-500">1. Select Geometry Shape</label>
+          <div class="inline-flex bg-[#F8F9FA] border border-slate-300 rounded-lg p-0.5 text-xs">
+            <button data-depth-toggle="inches" class="bg-[#003865] text-white px-3 py-1 rounded-md font-bold text-xs shadow transition">Depth in inches</button>
+            <button data-depth-toggle="feet" class="text-slate-600 px-3 py-1 rounded-md font-semibold text-xs hover:text-slate-900 transition">Depth in feet</button>
+          </div>
+        </div>
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 bg-[#F8F9FA] p-1.5 rounded-xl border border-slate-200 text-xs">
+          <button data-shape-tab="rectangle" class="bg-[#003865] text-white py-2 px-3 rounded-lg flex items-center justify-center gap-1.5 font-bold shadow-sm transition">
+            <span>■</span> Rectangle / Slab
+          </button>
+          <button data-shape-tab="cylinder" class="text-slate-600 hover:text-slate-900 py-2 px-3 rounded-lg flex items-center justify-center gap-1.5 font-semibold transition">
+            <span>●</span> Cylinder / Post
+          </button>
+          <button data-shape-tab="triangle" class="text-slate-600 hover:text-slate-900 py-2 px-3 rounded-lg flex items-center justify-center gap-1.5 font-semibold transition">
+            <span>▲</span> Triangle / Slope
+          </button>
+          <button data-shape-tab="multiarea" class="text-slate-600 hover:text-slate-900 py-2 px-3 rounded-lg flex items-center justify-center gap-1.5 font-semibold transition">
+            <span>➕</span> Multi-Area (+)
+          </button>
+        </div>
+      </div>
+
+      <!-- Dynamic Areas Input Container -->
+      <div id="areas-container"></div>
+
+      <!-- Add Area Button -->
+      <div>
+        <button id="add-area-btn" class="bg-[#EFE6C8] hover:bg-[#e4d8b0] text-[#003865] border border-[#003865] font-bold text-xs px-3.5 py-1.5 rounded-lg transition shadow-sm">
+          + Add another area
+        </button>
+      </div>
+
+      <!-- Material & Pricing Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-3 border-t border-slate-200">
+        <div>
+          <label class="block text-xs font-bold text-[#2C3138] mb-1">Material Preset (calculates tonnage & density)</label>
+          <select id="material-select" class="w-full bg-white border border-slate-300 rounded-lg px-3 py-2 text-sm font-semibold text-slate-800 focus:border-[#003865] focus:outline-none">
+            <option value="gravel" selected>Crushed Stone / Gravel (~1.40 tons/yd³)</option>
+            <option value="concrete">Ready-Mix Concrete (~2.03 tons/yd³)</option>
+            <option value="dirt">Screened Topsoil / Dirt (~1.10 tons/yd³)</option>
+            <option value="sand">Construction Sand (~1.35 tons/yd³)</option>
+            <option value="mulch">Bark / Wood Mulch (~0.40 tons/yd³)</option>
+            <option value="asphalt">Hot-Mix Asphalt (~1.95 tons/yd³)</option>
+          </select>
+        </div>
+        <div>
+          <label class="block text-xs font-bold text-[#2C3138] mb-1">Price per Cubic Yard — optional ($)</label>
+          <div class="relative flex items-center">
+            <span class="absolute left-3 text-slate-400 text-sm font-bold">$</span>
+            <input type="number" step="any" id="price-input" value="65.00" class="w-full bg-white border border-slate-300 rounded-lg pl-8 pr-4 py-2 text-sm font-bold text-slate-800 focus:border-[#003865] focus:outline-none" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Waste Buffer Selector -->
+      <div>
+        <label class="block text-xs font-bold text-[#2C3138] mb-1.5">Waste & Compaction Safety Buffer</label>
+        <div class="grid grid-cols-4 gap-2 text-center text-xs">
+          <button data-waste-btn="0" class="bg-white border border-slate-300 py-1.5 rounded-lg text-slate-600 font-semibold">0% Exact</button>
+          <button data-waste-btn="5" class="bg-white border border-slate-300 py-1.5 rounded-lg text-slate-600 font-semibold">+5% (Light)</button>
+          <button data-waste-btn="10" class="bg-[#EFE6C8] border-2 border-[#003865] py-1.5 rounded-lg text-[#003865] font-bold shadow-sm">+10% (Rec.)</button>
+          <button data-waste-btn="15" class="bg-white border border-slate-300 py-1.5 rounded-lg text-slate-600 font-semibold">+15% (Heavy)</button>
+        </div>
+      </div>
+
+      <!-- VOLUME RESULTS SECTION -->
+      <div class="pt-3 border-t-2 border-slate-200 space-y-3">
+        <div class="text-xs font-extrabold uppercase tracking-wider text-[#003865]">Volume Results & Material Takeoff</div>
+        
+        <!-- 4 Primary Stat Boxes -->
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-3">
+          <div class="bg-[#003865] rounded-xl p-3.5 text-center text-white shadow-md">
+            <div class="text-[10px] font-bold uppercase tracking-wider text-[#EFE6C8]">Cubic Yards</div>
+            <div id="res-cubic-yards" class="text-3xl font-black font-mono mt-0.5 text-[#FBAF3C]">2.72</div>
+          </div>
+          <div class="bg-white border-2 border-slate-200 rounded-xl p-3.5 text-center shadow-sm">
+            <div class="text-[10px] font-bold uppercase tracking-wider text-[#828892]">Cubic Feet</div>
+            <div id="res-cubic-feet" class="text-3xl font-black font-mono mt-0.5 text-[#003865]">73.44</div>
+          </div>
+          <div class="bg-white border-2 border-slate-200 rounded-xl p-3.5 text-center shadow-sm">
+            <div class="text-[10px] font-bold uppercase tracking-wider text-[#828892]">Estimated Tons</div>
+            <div id="res-tons" class="text-3xl font-black font-mono mt-0.5 text-[#2C3138]">3.81</div>
+          </div>
+          <div class="bg-[#F0FDF4] border-2 border-[#1BB954] rounded-xl p-3.5 text-center shadow-sm">
+            <div class="text-[10px] font-bold uppercase tracking-wider text-[#828892]">Total Cost</div>
+            <div id="res-total-cost" class="text-3xl font-black font-mono mt-0.5 text-[#1BB954]">$176.80</div>
+          </div>
+        </div>
+
+        <!-- Secondary Stats Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5 text-center text-xs">
+          <div class="bg-[#FAF8F2] border border-[#E2DCB9] rounded-lg py-2">
+            <span class="text-slate-500 font-semibold">Areas Summed:</span>
+            <span id="res-areas-count" class="font-bold text-[#003865] ml-1">1</span>
+          </div>
+          <div class="bg-[#FAF8F2] border border-[#E2DCB9] rounded-lg py-2">
+            <span class="text-slate-500 font-semibold">Cubic Yards + Buffer:</span>
+            <span id="res-waste-yards" class="font-bold text-[#003865] ml-1">2.72</span>
+          </div>
+          <div class="bg-[#FAF8F2] border border-[#E2DCB9] rounded-lg py-2">
+            <span class="text-slate-500 font-semibold">Cubic Feet per Yard:</span>
+            <span class="font-bold text-[#003865] ml-1">27 cu ft</span>
+          </div>
+        </div>
+
+        <!-- Retail Bag Equivalents Breakdown -->
+        <div class="bg-white border border-slate-200 rounded-xl p-3.5 space-y-1.5">
+          <div class="text-xs font-bold text-[#2C3138] flex items-center justify-between">
+            <span>🛍️ Commercial Bag Purchase Breakdown</span>
+            <span class="text-[11px] text-slate-500">Standard retail bags</span>
+          </div>
+          <div class="grid grid-cols-3 gap-2.5 text-center">
+            <div class="bg-[#F8F9FA] border border-slate-200 rounded-lg p-2">
+              <div class="text-[10px] text-slate-500 uppercase font-semibold">50 lb Bags</div>
+              <div id="bag-50-count" class="text-base font-bold text-[#003865] font-mono">152</div>
+            </div>
+            <div class="bg-[#F8F9FA] border border-slate-200 rounded-lg p-2">
+              <div class="text-[10px] text-slate-500 uppercase font-semibold">60 lb Bags</div>
+              <div id="bag-60-count" class="text-base font-bold text-[#003865] font-mono">127</div>
+            </div>
+            <div class="bg-[#F8F9FA] border border-slate-200 rounded-lg p-2">
+              <div class="text-[10px] text-slate-500 uppercase font-semibold">80 lb Bags</div>
+              <div id="bag-80-count" class="text-base font-bold text-[#003865] font-mono">95</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dynamic Vehicle Hauling Safety Engine -->
+        <div id="hauling-alert-box" class="bg-amber-50 border-2 border-amber-400 rounded-xl p-3.5 text-xs shadow-sm space-y-0.5">
+          <div id="hauling-alert-title" class="text-amber-900 font-bold flex items-center gap-1.5 text-sm">
+            <span>🚨</span> VEHICLE PAYLOAD & HAULING ADVISORY
+          </div>
+          <p id="hauling-alert-desc" class="text-slate-800 leading-relaxed font-medium">
+            Total Weight: 3.81 Tons (7,616 lbs). Exceeds standard 1/2-Ton pickup (F-150) payload capacity (~1,800 lbs).
+          </p>
+          <div id="hauling-alert-rec" class="text-amber-800 font-bold pt-0.5">
+            ➔ Recommendation: Requires 4+ pickup trips OR 1 single-axle dump truck bulk delivery.
+          </div>
+        </div>
+
+        <!-- Utility Action Bar -->
+        <div class="grid grid-cols-3 gap-2.5 pt-1">
+          <button id="share-btn" class="bg-[#FBAF3C] hover:bg-[#f0a32d] text-[#2C3138] font-bold py-2 rounded-lg text-xs flex items-center justify-center gap-1 shadow-sm transition">
+            🔗 Copy Share Link
+          </button>
+          <button id="print-btn" class="bg-slate-100 hover:bg-slate-200 text-[#003865] border border-slate-300 font-bold py-2 rounded-lg text-xs flex items-center justify-center gap-1 transition">
+            📄 Print Takeoff
+          </button>
+          <button id="embed-btn" class="bg-slate-100 hover:bg-slate-200 text-[#003865] border border-slate-300 font-bold py-2 rounded-lg text-xs flex items-center justify-center gap-1 transition">
+            &lt;/&gt; Embed Widget
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- MID-PAGE ADSENSE BANNER SPACE -->
+  <div class="my-6 max-w-5xl mx-auto px-4 w-full">
+    <div class="bg-slate-50 border border-dashed border-slate-300 rounded-xl p-4 text-center min-h-[90px] flex flex-col items-center justify-center relative overflow-hidden shadow-sm">
+      <span class="text-[10px] uppercase font-bold tracking-widest text-slate-400 mb-1">ADVERTISEMENT</span>
+      <div class="text-xs text-slate-400 font-mono">&lt;!-- Google AdSense Mid-Page Banner (728x90 / Responsive) --&gt;</div>
+    </div>
+  </div>
+
+  <!-- REFERENCE TABLE FOR COMMON PROJECTS -->
+  <section id="reference-tables" class="max-w-5xl mx-auto px-4 sm:px-6 py-6 w-full">
+    <div class="text-center pb-4">
+      <h2 class="text-2xl sm:text-3xl font-black text-[#003865]">Cubic Yard Reference Table for Common Projects</h2>
+      <p class="text-xs sm:text-sm text-slate-600 mt-1 max-w-xl mx-auto">
+        Typical slab, driveway, and fill projects with their cubic feet and cubic yard totals.
+      </p>
+    </div>
+
+    <div class="overflow-x-auto rounded-xl border border-slate-200 shadow-md">
+      <table class="w-full text-left text-xs sm:text-sm">
+        <thead class="bg-[#003865] text-white uppercase text-[11px] tracking-wider">
+          <tr>
+            <th class="py-3 px-4 sm:px-6">Common Project</th>
+            <th class="py-3 px-4 sm:px-6">Cubic Feet (ft³)</th>
+            <th class="py-3 px-4 sm:px-6 text-[#FBAF3C]">Cubic Yards (yd³)</th>
+            <th class="py-3 px-4 sm:px-6">Recommended Depth</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-slate-200">
+          <tr class="bg-[#FAF8F2]">
+            <td class="py-3 px-4 sm:px-6 font-bold text-[#2C3138]">Slab 10 ft × 10 ft × 4 in</td>
+            <td class="py-3 px-4 sm:px-6 text-slate-600">33.3 ft³</td>
+            <td class="py-3 px-4 sm:px-6 font-black text-[#003865]">1.23 yd³</td>
+            <td class="py-3 px-4 sm:px-6 text-slate-600">4" Standard Patio/Shed</td>
+          </tr>
+          <tr class="bg-white">
+            <td class="py-3 px-4 sm:px-6 font-bold text-[#2C3138]">Slab 20 ft × 20 ft × 4 in</td>
+            <td class="py-3 px-4 sm:px-6 text-slate-600">133.3 ft³</td>
+            <td class="py-3 px-4 sm:px-6 font-black text-[#003865]">4.94 yd³</td>
+            <td class="py-3 px-4 sm:px-6 text-slate-600">4" 2-Car Garage Floor</td>
+          </tr>
+          <tr class="bg-[#FAF8F2]">
+            <td class="py-3 px-4 sm:px-6 font-bold text-[#2C3138]">Patio 12 ft × 12 ft × 4 in</td>
+            <td class="py-3 px-4 sm:px-6 text-slate-600">48.0 ft³</td>
+            <td class="py-3 px-4 sm:px-6 font-black text-[#003865]">1.78 yd³</td>
+            <td class="py-3 px-4 sm:px-6 text-slate-600">4" Paver Base / Concrete</td>
+          </tr>
+          <tr class="bg-white">
+            <td class="py-3 px-4 sm:px-6 font-bold text-[#2C3138]">Driveway 20 ft × 10 ft × 6 in</td>
+            <td class="py-3 px-4 sm:px-6 text-slate-600">100.0 ft³</td>
+            <td class="py-3 px-4 sm:px-6 font-black text-[#003865]">3.70 yd³</td>
+            <td class="py-3 px-4 sm:px-6 text-slate-600">6" Heavy Vehicle Pour</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- BOTTOM ADSENSE BANNER SPACE -->
+  <div class="my-6 max-w-5xl mx-auto px-4 w-full">
+    <div class="bg-slate-50 border border-dashed border-slate-300 rounded-xl p-4 text-center min-h-[90px] flex flex-col items-center justify-center relative overflow-hidden shadow-sm">
+      <span class="text-[10px] uppercase font-bold tracking-widest text-slate-400 mb-1">ADVERTISEMENT</span>
+      <div class="text-xs text-slate-400 font-mono">&lt;!-- Google AdSense Bottom Leaderboard (Responsive) --&gt;</div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="bg-[#003865] text-slate-200 pt-10 pb-8 border-t-4 border-[#FBAF3C] mt-auto">
+    <div class="max-w-7xl mx-auto px-6 sm:px-8 text-center space-y-4">
+      <div class="text-sm font-bold text-white">CubicYard<span class="text-[#FBAF3C]">Hub</span>.com — Free Takeoff Engine</div>
+      <div class="flex flex-wrap justify-center gap-6 text-xs text-slate-300">
+        <a href="/disclaimer.html" class="hover:text-white text-[#FBAF3C]">Disclaimer</a>
+        <a href="/sitemap.html" class="hover:text-white text-[#FBAF3C]">HTML Sitemap</a>
+        <a href="/privacy.html" class="hover:text-white">Privacy Policy</a>
+        <a href="/terms.html" class="hover:text-white">Terms of Service</a>
+      </div>
+      <div class="text-[11px] text-slate-400">© 2026 CubicYardHub. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <!-- EMBEDDED INLINE REACTIVE ENGINE SCRIPT -->
+  <script>
+    const MATERIAL_PRESETS = {
+      gravel: { name: "Crushed Stone / Gravel", densityLbs: 2800, tonsPerYard: 1.40, unitType: "weight" },
+      concrete: { name: "Ready-Mix Concrete", densityLbs: 4050, tonsPerYard: 2.03, unitType: "weight" },
+      dirt: { name: "Screened Topsoil / Dirt", densityLbs: 2200, tonsPerYard: 1.10, unitType: "weight" },
+      sand: { name: "Construction Sand", densityLbs: 2700, tonsPerYard: 1.35, unitType: "weight" },
+      mulch: { name: "Bark / Wood Mulch", densityLbs: 800, tonsPerYard: 0.40, unitType: "volume" },
+      asphalt: { name: "Hot-Mix Asphalt", densityLbs: 3900, tonsPerYard: 1.95, unitType: "weight" }
+    };
+
+    const state = {
+      unitSystem: 'imperial',
+      shape: 'rectangle',
+      depthUnit: 'inches',
+      areas: [{ id: 1, name: 'Area 1', length: 20, width: 10, depth: 4 }],
+      material: 'gravel',
+      wastePercent: 10,
+      pricePerUnit: 65.00
+    };
+
+    function renderAreas() {
+      const container = document.getElementById('areas-container');
+      if (!container) return;
+      container.innerHTML = '';
+
+      state.areas.forEach((area, index) => {
+        const areaEl = document.createElement('div');
+        areaEl.className = 'bg-[#FAF8F2] border border-[#E2DCB9] rounded-xl p-4 mb-3 relative transition shadow-sm';
+        
+        let shapeHtml = '';
+        if (state.shape === 'cylinder') {
+          shapeHtml = `
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-2">
+              <div>
+                <label class="block text-xs font-semibold text-slate-700 mb-1">Diameter (${state.unitSystem === 'imperial' ? 'feet' : 'meters'})</label>
+                <input type="number" step="any" value="${area.length}" data-input="length" data-index="${index}" class="w-full bg-white border border-slate-300 rounded-lg px-3 py-2 text-slate-900 font-bold focus:border-[#003865] focus:outline-none" />
+              </div>
+              <div>
+                <label class="block text-xs font-semibold text-[#1BB954] mb-1">Depth (${state.depthUnit === 'inches' ? 'inches' : (state.unitSystem === 'imperial' ? 'feet' : 'cm')})</label>
+                <input type="number" step="any" value="${area.depth}" data-input="depth" data-index="${index}" class="w-full bg-white border-2 border-[#1BB954] rounded-lg px-3 py-2 text-slate-900 font-bold focus:outline-none" />
+              </div>
+            </div>`;
+        } else if (state.shape === 'triangle') {
+          shapeHtml = `
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-2">
+              <div>
+                <label class="block text-xs font-semibold text-slate-700 mb-1">Base Length (${state.unitSystem === 'imperial' ? 'feet' : 'meters'})</label>
+                <input type="number" step="any" value="${area.length}" data-input="length" data-index="${index}" class="w-full bg-white border border-slate-300 rounded-lg px-3 py-2 text-slate-900 font-bold focus:border-[#003865] focus:outline-none" />
+              </div>
+              <div>
+                <label class="block text-xs font-semibold text-slate-700 mb-1">Perpendicular Height (${state.unitSystem === 'imperial' ? 'feet' : 'meters'})</label>
+                <input type="number" step="any" value="${area.width}" data-input="width" data-index="${index}" class="w-full bg-white border border-slate-300 rounded-lg px-3 py-2 text-slate-900 font-bold focus:border-[#003865] focus:outline-none" />
+              </div>
+              <div>
+                <label class="block text-xs font-semibold text-[#1BB954] mb-1">Depth (${state.depthUnit === 'inches' ? 'inches' : (state.unitSystem === 'imperial' ? 'feet' : 'cm')})</label>
+                <input type="number" step="any" value="${area.depth}" data-input="depth" data-index="${index}" class="w-full bg-white border-2 border-[#1BB954] rounded-lg px-3 py-2 text-slate-900 font-bold focus:outline-none" />
+              </div>
+            </div>`;
+        } else {
+          shapeHtml = `
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-2">
+              <div>
+                <label class="block text-xs font-semibold text-slate-700 mb-1">Length (${state.unitSystem === 'imperial' ? 'feet' : 'meters'})</label>
+                <input type="number" step="any" value="${area.length}" data-input="length" data-index="${index}" class="w-full bg-white border border-slate-300 rounded-lg px-3 py-2 text-slate-900 font-bold focus:border-[#003865] focus:outline-none" />
+              </div>
+              <div>
+                <label class="block text-xs font-semibold text-slate-700 mb-1">Width (${state.unitSystem === 'imperial' ? 'feet' : 'meters'})</label>
+                <input type="number" step="any" value="${area.width}" data-input="width" data-index="${index}" class="w-full bg-white border border-slate-300 rounded-lg px-3 py-2 text-slate-900 font-bold focus:border-[#003865] focus:outline-none" />
+              </div>
+              <div>
+                <label class="block text-xs font-semibold text-[#1BB954] mb-1">Depth (${state.depthUnit === 'inches' ? 'inches' : (state.unitSystem === 'imperial' ? 'feet' : 'cm')})</label>
+                <input type="number" step="any" value="${area.depth}" data-input="depth" data-index="${index}" class="w-full bg-white border-2 border-[#1BB954] rounded-lg px-3 py-2 text-slate-900 font-bold focus:outline-none" />
+              </div>
+            </div>`;
+        }
+
+        areaEl.innerHTML = `
+          <div class="flex items-center justify-between pb-1">
+            <div class="text-xs font-bold uppercase tracking-wider text-[#003865]">${area.name}</div>
+            ${state.areas.length > 1 ? `<button data-remove-index="${index}" class="text-red-500 font-bold text-xs hover:underline">Remove ✕</button>` : ''}
+          </div>
+          ${shapeHtml}
+          <div class="mt-2 text-right text-xs font-bold text-[#003865]" id="subtotal-area-${index}">Calculating...</div>
+        `;
+        container.appendChild(areaEl);
+      });
+
+      container.querySelectorAll('input').forEach(input => {
+        input.addEventListener('input', (e) => {
+          const idx = parseInt(e.target.getAttribute('data-index'));
+          const field = e.target.getAttribute('data-input');
+          state.areas[idx][field] = parseFloat(e.target.value) || 0;
+          calculateAll();
+        });
+      });
+
+      container.querySelectorAll('[data-remove-index]').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          const idx = parseInt(e.target.getAttribute('data-remove-index'));
+          state.areas.splice(idx, 1);
+          renderAreas();
+          calculateAll();
+        });
+      });
+    }
+
+    function calculateAll() {
+      let totalVolumeCuFt = 0;
+      const isMetric = state.unitSystem === 'metric';
+
+      state.areas.forEach((area, index) => {
+        let cuFt = 0;
+        let depthInFeet = 0;
+
+        if (state.depthUnit === 'inches') {
+          depthInFeet = isMetric ? (area.depth / 100) * 3.28084 : area.depth / 12;
+        } else {
+          depthInFeet = isMetric ? area.depth * 3.28084 : area.depth;
+        }
+
+        const lengthInFeet = isMetric ? area.length * 3.28084 : area.length;
+        const widthInFeet = isMetric ? area.width * 3.28084 : area.width;
+
+        if (state.shape === 'cylinder') {
+          const radius = lengthInFeet / 2;
+          cuFt = Math.PI * Math.pow(radius, 2) * depthInFeet;
+        } else if (state.shape === 'triangle') {
+          cuFt = 0.5 * lengthInFeet * widthInFeet * depthInFeet;
+        } else {
+          cuFt = lengthInFeet * widthInFeet * depthInFeet;
+        }
+
+        totalVolumeCuFt += cuFt;
+
+        const subtotalEl = document.getElementById(`subtotal-area-${index}`);
+        if (subtotalEl) {
+          subtotalEl.textContent = `This area: ${(cuFt / 27).toFixed(2)} yd³ • ${cuFt.toFixed(1)} ft³`;
+        }
+      });
+
+      const wasteMultiplier = 1 + (state.wastePercent / 100);
+      const totalCuFtWithWaste = totalVolumeCuFt * wasteMultiplier;
+      const totalCuYards = totalCuFtWithWaste / 27;
+
+      const matInfo = MATERIAL_PRESETS[state.material] || MATERIAL_PRESETS.gravel;
+      const totalLbs = totalCuYards * matInfo.densityLbs;
+      const totalTons = totalLbs / 2000;
+      const totalCost = totalCuYards * state.pricePerUnit;
+
+      setText('res-cubic-yards', totalCuYards.toFixed(2));
+      setText('res-cubic-feet', totalCuFtWithWaste.toFixed(2));
+      setText('res-tons', totalTons.toFixed(2));
+      setText('res-total-cost', `$${totalCost.toFixed(2)}`);
+      setText('res-areas-count', state.areas.length.toString());
+      setText('res-waste-yards', totalCuYards.toFixed(2));
+
+      if (matInfo.unitType === 'volume') {
+        setText('bag-50-count', `${Math.ceil(totalCuFtWithWaste / 2.0)} (2 cu ft)`);
+        setText('bag-60-count', `${Math.ceil(totalCuFtWithWaste / 1.5)} (1.5 cu ft)`);
+        setText('bag-80-count', `${Math.ceil(totalCuFtWithWaste / 3.0)} (3 cu ft)`);
+      } else {
+        setText('bag-50-count', Math.ceil(totalLbs / 50).toLocaleString());
+        setText('bag-60-count', Math.ceil(totalLbs / 60).toLocaleString());
+        setText('bag-80-count', Math.ceil(totalLbs / 80).toLocaleString());
+      }
+
+      const alertDesc = document.getElementById('hauling-alert-desc');
+      const alertRec = document.getElementById('hauling-alert-rec');
+      if (totalLbs <= 1800) {
+        if (alertDesc) alertDesc.textContent = `Total Weight: ${totalTons.toFixed(2)} Tons (${Math.round(totalLbs).toLocaleString()} lbs). Fits within standard 1/2-Ton (F-150) payload capacity (~1,800 lbs).`;
+        if (alertRec) alertRec.textContent = '➔ Recommendation: Single trip with a standard pickup truck or utility trailer.';
+      } else {
+        const trips = Math.ceil(totalLbs / 1800);
+        if (alertDesc) alertDesc.textContent = `Total Weight: ${totalTons.toFixed(2)} Tons (${Math.round(totalLbs).toLocaleString()} lbs). Exceeds standard 1/2-Ton pickup (F-150) safe payload capacity (~1,800 lbs).`;
+        if (alertRec) alertRec.textContent = `➔ Recommendation: Requires ${trips} pickup truck trips OR 1 single-axle dump truck bulk delivery.`;
+      }
+    }
+
+    function setText(id, val) {
+      const el = document.getElementById(id);
+      if (el) el.textContent = val;
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      renderAreas();
+      calculateAll();
+
+      document.querySelectorAll('[data-shape-tab]').forEach(tab => {
+        tab.addEventListener('click', () => {
+          state.shape = tab.getAttribute('data-shape-tab');
+          document.querySelectorAll('[data-shape-tab]').forEach(t => {
+            if (t.getAttribute('data-shape-tab') === state.shape) {
+              t.className = 'bg-[#003865] text-white py-2 px-3 rounded-lg flex items-center justify-center gap-1.5 font-bold shadow-sm transition';
+            } else {
+              t.className = 'text-slate-600 hover:text-slate-900 py-2 px-3 rounded-lg flex items-center justify-center gap-1.5 font-semibold transition';
+            }
+          });
+          renderAreas();
+          calculateAll();
+        });
+      });
+
+      document.querySelectorAll('[data-depth-toggle]').forEach(btn => {
+        btn.addEventListener('click', () => {
+          state.depthUnit = btn.getAttribute('data-depth-toggle');
+          document.querySelectorAll('[data-depth-toggle]').forEach(b => {
+            if (b.getAttribute('data-depth-toggle') === state.depthUnit) {
+              b.className = 'bg-[#003865] text-white px-3 py-1 rounded-md font-bold text-xs shadow transition';
+            } else {
+              b.className = 'text-slate-600 px-3 py-1 rounded-md font-semibold text-xs hover:text-slate-900 transition';
+            }
+          });
+          calculateAll();
+        });
+      });
+
+      document.querySelectorAll('[data-waste-btn]').forEach(btn => {
+        btn.addEventListener('click', () => {
+          state.wastePercent = parseFloat(btn.getAttribute('data-waste-btn'));
+          document.querySelectorAll('[data-waste-btn]').forEach(b => {
+            if (parseFloat(b.getAttribute('data-waste-btn')) === state.wastePercent) {
+              b.className = 'bg-[#EFE6C8] border-2 border-[#003865] py-1.5 rounded-lg text-[#003865] font-bold shadow-sm';
+            } else {
+              b.className = 'bg-white border border-slate-300 py-1.5 rounded-lg text-slate-600 font-semibold';
+            }
+          });
+          calculateAll();
+        });
+      });
+
+      const matSel = document.getElementById('material-select');
+      if (matSel) matSel.addEventListener('change', (e) => { state.material = e.target.value; calculateAll(); });
+
+      const prIn = document.getElementById('price-input');
+      if (prIn) prIn.addEventListener('input', (e) => { state.pricePerUnit = parseFloat(e.target.value) || 0; calculateAll(); });
+
+      const addBtn = document.getElementById('add-area-btn');
+      if (addBtn) addBtn.addEventListener('click', () => {
+        const id = state.areas.length + 1;
+        state.areas.push({ id, name: `Area ${id}`, length: 10, width: 10, depth: 4 });
+        renderAreas();
+        calculateAll();
+      });
+
+      const shareBtn = document.getElementById('share-btn');
+      if (shareBtn) shareBtn.addEventListener('click', () => {
+        navigator.clipboard.writeText(window.location.href).then(() => {
+          shareBtn.textContent = '✓ Copied!';
+          setTimeout(() => shareBtn.textContent = '🔗 Copy Share Link', 2000);
+        });
+      });
+
+      const printBtn = document.getElementById('print-btn');
+      if (printBtn) printBtn.addEventListener('click', () => window.print());
+
+      const embedBtn = document.getElementById('embed-btn');
+      if (embedBtn) embedBtn.addEventListener('click', () => {
+        alert(`<iframe src="${window.location.origin}/" width="100%" height="700" frameborder="0"></iframe>`);
+      });
+    });
+  </script>
+</body>
+</html>

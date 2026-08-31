@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 100" width="500" height="100">
+  <g transform="translate(15, 12)">
+    <!-- Central Cube -->
+    <polygon points="38,18 64,31 38,44 12,31" fill="#FBAF3C" />
+    <polygon points="12,31 38,44 38,68 12,55" fill="#003865" />
+    <polygon points="38,44 64,31 64,55 38,68" fill="#1BB954" />
+    <!-- Orbiting Loop Arrow -->
+    <path d="M 66,22 A 38,38 0 1,0 72,50" fill="none" stroke="#FBAF3C" stroke-width="3" stroke-linecap="round" />
+    <polygon points="74,42 78,54 66,50" fill="#FBAF3C" />
+  </g>
+  <text x="105" y="52" font-family="'Plus Jakarta Sans', sans-serif" font-size="30" font-weight="800" fill="#003865">CubicYard</text>
+  <text x="262" y="52" font-family="'Plus Jakarta Sans', sans-serif" font-size="30" font-weight="800" fill="#FBAF3C">Hub</text>
+  <text x="330" y="52" font-family="'Plus Jakarta Sans', sans-serif" font-size="26" font-weight="500" fill="#828892">.com</text>
+  <text x="107" y="74" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" font-weight="600" fill="#828892" letter-spacing="1.5">INSTANT VOLUME, TONNAGE &amp; TRUCKLOAD ENGINE</text>
+</svg>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us — CubicYardHub</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>body { font-family: 'Plus Jakarta Sans', sans-serif; }</style>
+</head>
+<body class="bg-[#F8F9FA] text-[#2C3138] min-h-screen flex flex-col">
+  
+  <!-- TOP COLOR PALETTE ACCENT STRIP -->
+  <div class="h-2 w-full flex">
+    <div class="h-full w-1/6 bg-[#003865]"></div>
+    <div class="h-full w-1/6 bg-[#1BB954]"></div>
+    <div class="h-full w-1/6 bg-[#FBAF3C]"></div>
+    <div class="h-full w-1/6 bg-[#EFE6C8]"></div>
+    <div class="h-full w-1/6 bg-[#828892]"></div>
+    <div class="h-full w-1/6 bg-[#2C3138]"></div>
+  </div>
+
+  <!-- NAVIGATION BAR -->
+  <header class="bg-white border-b border-slate-200 sticky top-0 z-50 px-4 sm:px-8 py-3.5 shadow-sm">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <a href="index.html" class="flex items-center space-x-3">
+        <div class="w-9 h-9 rounded-lg bg-[#003865] flex items-center justify-center font-extrabold text-[#FBAF3C] text-lg shadow">CY</div>
+        <div class="text-xl font-bold tracking-tight text-[#2C3138]">CubicYard<span class="text-[#003865]">Hub</span></div>
+      </a>
+      <nav class="hidden lg:flex items-center space-x-6 text-sm font-medium">
+        <a href="index.html" class="text-slate-600 hover:text-[#003865] transition pb-1">Slab & Patio</a>
+<a href="gravel-calculator.html" class="text-slate-600 hover:text-[#003865] transition pb-1">Gravel & Rock</a>
+<a href="dirt-calculator.html" class="text-slate-600 hover:text-[#003865] transition pb-1">Dirt & Topsoil</a>
+<a href="sand-calculator.html" class="text-slate-600 hover:text-[#003865] transition pb-1">Sand</a>
+<a href="concrete-calculator.html" class="text-slate-600 hover:text-[#003865] transition pb-1">Concrete</a>
+<a href="mulch-calculator.html" class="text-slate-600 hover:text-[#003865] transition pb-1">Mulch</a>
+<a href="yards-to-tons.html" class="text-slate-600 hover:text-[#003865] transition pb-1">Yards to Tons</a>
+
+      </nav>
+      <div class="flex items-center space-x-3">
+        <button id="unit-toggle" class="bg-[#EFE6C8] text-[#003865] border border-[#003865]/30 hover:bg-[#e8deb8] px-3.5 py-1.5 rounded-lg text-xs font-bold transition">
+          Imperial
+        </button>
+        <a href="#calculator" class="bg-[#FBAF3C] hover:bg-[#f0a32d] text-[#2C3138] font-bold px-4 py-1.5 rounded-lg text-xs shadow-sm transition">
+          Calculate ▼
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-4xl mx-auto px-6 py-12 flex-grow space-y-6">
+    <h1 class="text-3xl font-extrabold text-[#003865]">Contact & Support</h1>
+    <div class="bg-white border border-slate-200 rounded-xl p-8 shadow-sm space-y-4 text-sm text-slate-700 leading-relaxed">
+      
+  <p>Have questions, feedback, or need a custom material preset added to our engine? We would love to hear from you.</p>
+  <p class="font-bold text-[#003865]">Email: support@cubicyardcalc.com</p>
+  <p class="text-xs text-slate-500">We typically reply within 24 hours on business days.</p>
+
+    </div>
+  </main>
+  
+  <!-- FOOTER -->
+  <footer class="bg-[#003865] text-slate-200 pt-16 pb-12 border-t-4 border-[#FBAF3C]">
+    <div class="max-w-7xl mx-auto px-6 sm:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-10 pb-12 border-b border-slate-700">
+        <div>
+          <div class="flex items-center space-x-3 mb-4">
+            <div class="w-8 h-8 rounded-lg bg-white flex items-center justify-center font-extrabold text-[#003865] text-base">CY</div>
+            <span class="text-xl font-bold text-white tracking-tight">CubicYard<span class="text-[#FBAF3C]">Hub</span></span>
+          </div>
+          <p class="text-xs text-[#EFE6C8] leading-relaxed mb-4">
+            The professional contractor and DIY volume takeoff engine. Accurate cubic yards, tons, retail bag equivalents, and vehicle hauling safety.
+          </p>
+          <div class="text-[11px] text-slate-400">
+            © 2026 CubicYardHub. All rights reserved.
+          </div>
+        </div>
+
+        <div>
+          <h4 class="text-xs font-bold uppercase tracking-wider text-[#FBAF3C] mb-3">Material Calculators</h4>
+          <ul class="space-y-2 text-xs text-slate-300">
+            <li><a href="dirt-calculator.html" class="hover:text-white transition">Dirt & Topsoil Calculator (9.9K Vol)</a></li>
+            <li><a href="gravel-calculator.html" class="hover:text-white transition">Gravel & Crushed Stone Calculator</a></li>
+            <li><a href="sand-calculator.html" class="hover:text-white transition">Construction Sand Calculator</a></li>
+            <li><a href="concrete-calculator.html" class="hover:text-white transition">Concrete Slab & Block Calculator</a></li>
+            <li><a href="mulch-calculator.html" class="hover:text-white transition">Bark & Wood Mulch Calculator</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-xs font-bold uppercase tracking-wider text-[#FBAF3C] mb-3">Unit Converters & Tools</h4>
+          <ul class="space-y-2 text-xs text-slate-300">
+            <li><a href="yards-to-tons.html" class="hover:text-white transition">Yards to Tons Calculator</a></li>
+            <li><a href="yards-to-tons.html" class="hover:text-white transition">Tons to Cubic Yards Converter</a></li>
+            <li><a href="index.html" class="hover:text-white transition">Square Feet to Cubic Yards</a></li>
+            <li><a href="index.html" class="hover:text-white transition">Cubic Feet to Cubic Yards</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-xs font-bold uppercase tracking-wider text-[#FBAF3C] mb-3">Company & Compliance</h4>
+          <ul class="space-y-2 text-xs text-slate-300">
+            <li><a href="about.html" class="hover:text-white transition">About Our Engineering Team</a></li>
+            <li><a href="contact.html" class="hover:text-white transition">Contact & Support</a></li>
+            <li><a href="privacy.html" class="hover:text-white transition">Privacy Policy</a></li>
+            <li><a href="terms.html" class="hover:text-white transition">Terms of Service</a></li>
+            <li><a href="sitemap.xml" class="hover:text-white transition">XML Sitemap</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="pt-8 text-center text-[11px] text-slate-400">
+        All calculations are mathematical estimates based on standard material densities. Verify quantities with local ready-mix and quarry suppliers prior to pouring or ordering.
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
