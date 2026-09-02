@@ -1,170 +1,170 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- Homepage -->
-  <url>
-    <loc>https://cubicyardcalc.com/</loc>
-    <lastmod>2026-08-29</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
+<!--  Homepage  -->
+<url>
+<loc>https://cubicyardhub.com/</loc>
+<lastmod>2026-09-02</lastmod>
+<changefreq>daily</changefreq>
+<priority>1.0</priority>
+</url>
 
-  <!-- Bulk Materials Silo -->
-  <url>
-    <loc>https://cubicyardcalc.com/materials/dirt-calculator.html</loc>
-    <lastmod>2026-08-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://cubicyardcalc.com/materials/rock-calculator.html</loc>
-    <lastmod>2026-08-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://cubicyardcalc.com/materials/sand-calculator.html</loc>
-    <lastmod>2026-08-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://cubicyardcalc.com/materials/pea-gravel-calculator.html</loc>
-    <lastmod>2026-08-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://cubicyardcalc.com/materials/river-rock-calculator.html</loc>
-    <lastmod>2026-08-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://cubicyardcalc.com/materials/crusher-run-calculator.html</loc>
-    <lastmod>2026-08-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://cubicyardcalc.com/materials/mulch-calculator.html</loc>
-    <lastmod>2026-08-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
+<!--  Bulk Materials Silo  -->
+<url>
+<loc>https://cubicyardhub.com/materials/dirt-calculator.html</loc>
+<lastmod>2026-09-02</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://cubicyardhub.com/materials/rock-calculator.html</loc>
+<lastmod>2026-09-02</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://cubicyardhub.com/materials/sand-calculator.html</loc>
+<lastmod>2026-09-02</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://cubicyardhub.com/materials/pea-gravel-calculator.html</loc>
+<lastmod>2026-09-02</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://cubicyardhub.com/materials/river-rock-calculator.html</loc>
+<lastmod>2026-09-02</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://cubicyardhub.com/materials/crusher-run-calculator.html</loc>
+<lastmod>2026-09-02</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://cubicyardhub.com/materials/mulch-calculator.html</loc>
+<lastmod>2026-09-02</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
 
-  <!-- Concrete & Masonry Specialist Silo -->
-  <url>
-    <loc>https://cubicyardcalc.com/slab-calculator.html</loc>
-    <lastmod>2026-08-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://cubicyardcalc.com/footing-calculator.html</loc>
-    <lastmod>2026-08-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://cubicyardcalc.com/concrete-block-calculator.html</loc>
-    <lastmod>2026-08-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://cubicyardcalc.com/fence-post-calculator.html</loc>
-    <lastmod>2026-08-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://cubicyardcalc.com/stairs-calculator.html</loc>
-    <lastmod>2026-08-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://cubicyardcalc.com/bag-calculator.html</loc>
-    <lastmod>2026-08-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
+<!--  Concrete & Masonry Specialist Silo  -->
+<url>
+<loc>https://cubicyardhub.com/slab-calculator.html</loc>
+<lastmod>2026-09-02</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://cubicyardhub.com/footing-calculator.html</loc>
+<lastmod>2026-09-02</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://cubicyardhub.com/concrete-block-calculator.html</loc>
+<lastmod>2026-09-02</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://cubicyardhub.com/fence-post-calculator.html</loc>
+<lastmod>2026-09-02</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://cubicyardhub.com/stairs-calculator.html</loc>
+<lastmod>2026-09-02</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://cubicyardhub.com/bag-calculator.html</loc>
+<lastmod>2026-09-02</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
 
-  <!-- Cost & Driveway Silo (High CPC) -->
-  <url>
-    <loc>https://cubicyardcalc.com/asphalt-driveway-cost.html</loc>
-    <lastmod>2026-08-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://cubicyardcalc.com/driveway-calculator.html</loc>
-    <lastmod>2026-08-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://cubicyardcalc.com/cost-calculator.html</loc>
-    <lastmod>2026-08-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
+<!--  Cost & Driveway Silo  -->
+<url>
+<loc>https://cubicyardhub.com/asphalt-driveway-cost.html</loc>
+<lastmod>2026-09-02</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://cubicyardhub.com/driveway-calculator.html</loc>
+<lastmod>2026-09-02</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://cubicyardhub.com/cost-calculator.html</loc>
+<lastmod>2026-09-02</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
 
-  <!-- Converters Silo -->
-  <url>
-    <loc>https://cubicyardcalc.com/converters/yards-to-tons-calculator.html</loc>
-    <lastmod>2026-08-29</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://cubicyardcalc.com/converters/cubic-feet-to-cubic-yards.html</loc>
-    <lastmod>2026-08-29</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://cubicyardcalc.com/converters/square-feet-to-cubic-yards.html</loc>
-    <lastmod>2026-08-29</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
+<!--  Converters Silo  -->
+<url>
+<loc>https://cubicyardhub.com/converters/yards-to-tons-calculator.html</loc>
+<lastmod>2026-09-02</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://cubicyardhub.com/converters/cubic-feet-to-cubic-yards.html</loc>
+<lastmod>2026-09-02</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://cubicyardhub.com/converters/square-feet-to-cubic-yards.html</loc>
+<lastmod>2026-09-02</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
 
-  <!-- Trust, Legal & Sitemaps -->
-  <url>
-    <loc>https://cubicyardcalc.com/sitemap.html</loc>
-    <lastmod>2026-08-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://cubicyardcalc.com/disclaimer.html</loc>
-    <lastmod>2026-08-29</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://cubicyardcalc.com/about.html</loc>
-    <lastmod>2026-08-29</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://cubicyardcalc.com/contact.html</loc>
-    <lastmod>2026-08-29</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://cubicyardcalc.com/privacy.html</loc>
-    <lastmod>2026-08-29</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://cubicyardcalc.com/terms.html</loc>
-    <lastmod>2026-08-29</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.3</priority>
-  </url>
+<!--  Trust, Legal & Sitemaps  -->
+<url>
+<loc>https://cubicyardhub.com/sitemap.html</loc>
+<lastmod>2026-09-02</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://cubicyardhub.com/disclaimer.html</loc>
+<lastmod>2026-09-02</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+<url>
+<loc>https://cubicyardhub.com/about.html</loc>
+<lastmod>2026-09-02</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+<url>
+<loc>https://cubicyardhub.com/contact.html</loc>
+<lastmod>2026-09-02</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+<url>
+<loc>https://cubicyardhub.com/privacy.html</loc>
+<lastmod>2026-09-02</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.3</priority>
+</url>
+<url>
+<loc>https://cubicyardhub.com/terms.html</loc>
+<lastmod>2026-09-02</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.3</priority>
+</url>
 </urlset>
