@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 100" width="480" height="100">
+  <g transform="translate(10, 10)">
+    <rect width="80" height="80" rx="18" fill="#003865" />
+    <text x="14" y="54" font-family="'Plus Jakarta Sans', sans-serif" font-size="42" font-weight="800" fill="#FFFFFF">C</text>
+    <text x="44" y="54" font-family="'Plus Jakarta Sans', sans-serif" font-size="42" font-weight="800" fill="#FBAF3C">Y</text>
+    <line x1="56" y1="58" x2="68" y2="58" stroke="#1BB954" stroke-width="3" stroke-linecap="round" />
+    <line x1="56" y1="66" x2="72" y2="66" stroke="#1BB954" stroke-width="3" stroke-linecap="round" />
+  </g>
+  <text x="110" y="50" font-family="'Plus Jakarta Sans', sans-serif" font-size="30" font-weight="800" fill="#003865">Cubic</text>
+  <text x="200" y="50" font-family="'Plus Jakarta Sans', sans-serif" font-size="30" font-weight="800" fill="#2C3138">Yard</text>
+  <text x="280" y="50" font-family="'Plus Jakarta Sans', sans-serif" font-size="30" font-weight="800" fill="#1BB954">Hub</text>
+  <text x="112" y="72" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="600" fill="#828892" letter-spacing="1.2">CONSTRUCTION &amp; LANDSCAPE CALCULATOR</text>
+</svg>

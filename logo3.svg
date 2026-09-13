@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 100" width="480" height="100">
+  <g transform="translate(15, 12)">
+    <!-- Hexagon -->
+    <polygon points="40,5 75,25 75,65 40,85 5,65 5,25" fill="#003865" />
+    <!-- Top Layer (Green) -->
+    <polygon points="5,25 40,5 75,25 60,35 20,35" fill="#1BB954" />
+    <!-- Middle Layer (Yellow) -->
+    <polygon points="20,35 60,35 68,52 12,52" fill="#FBAF3C" />
+  </g>
+  <text x="110" y="52" font-family="'Plus Jakarta Sans', sans-serif" font-size="28" font-weight="800" fill="#003865">CUBIC YARD</text>
+  <rect x="290" y="26" width="80" height="34" rx="8" fill="#FBAF3C" />
+  <text x="306" y="50" font-family="'Plus Jakarta Sans', sans-serif" font-size="22" font-weight="800" fill="#2C3138">HUB</text>
+  <text x="112" y="74" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" font-weight="600" fill="#828892" letter-spacing="1.5">BULK MATERIAL &amp; HAULING TAKEOFF</text>
+</svg>

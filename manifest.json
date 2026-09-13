@@ -1,0 +1,16 @@
+{
+  "name": "Cubic Yard & Material Calculator",
+  "short_name": "CubicYardCalc",
+  "description": "Free instant cubic yard, tonnage, bag count & vehicle hauling load calculator for landscape, concrete & construction materials.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#003865",
+  "theme_color": "#003865",
+  "icons": [
+    {
+      "src": "/icon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}
