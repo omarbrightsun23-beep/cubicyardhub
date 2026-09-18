@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <!-- ======================================================= -->
-  <!-- 1. CORE HOMEPAGE & PRIMARY TAKEOFF ENGINE                -->
-  <!-- ======================================================= -->
+  <!-- Core Takeoff Engine -->
   <url>
     <loc>https://cubicyardhub.com/</loc>
     <lastmod>2026-09-18</lastmod>
@@ -11,9 +9,7 @@
     <priority>1.0</priority>
   </url>
 
-  <!-- ======================================================= -->
-  <!-- 2. BULK MATERIALS CALCULATOR SILO                       -->
-  <!-- ======================================================= -->
+  <!-- Bulk Materials Silo -->
   <url>
     <loc>https://cubicyardhub.com/materials/dirt-calculator.html</loc>
     <lastmod>2026-09-18</lastmod>
@@ -57,9 +53,7 @@
     <priority>0.8</priority>
   </url>
 
-  <!-- ======================================================= -->
-  <!-- 3. CONCRETE & MASONRY SPECIALIST SILO                   -->
-  <!-- ======================================================= -->
+  <!-- Concrete & Masonry Specialist Silo -->
   <url>
     <loc>https://cubicyardhub.com/slab-calculator.html</loc>
     <lastmod>2026-09-18</lastmod>
@@ -97,9 +91,7 @@
     <priority>0.8</priority>
   </url>
 
-  <!-- ======================================================= -->
-  <!-- 4. COST & DRIVEWAY ESTIMATING SILO                      -->
-  <!-- ======================================================= -->
+  <!-- Cost & Driveway Silo -->
   <url>
     <loc>https://cubicyardhub.com/asphalt-driveway-cost.html</loc>
     <lastmod>2026-09-18</lastmod>
@@ -119,9 +111,7 @@
     <priority>0.8</priority>
   </url>
 
-  <!-- ======================================================= -->
-  <!-- 5. UNIT CONVERTERS SILO                                 -->
-  <!-- ======================================================= -->
+  <!-- Converters Silo -->
   <url>
     <loc>https://cubicyardhub.com/converters/yards-to-tons-calculator.html</loc>
     <lastmod>2026-09-18</lastmod>
@@ -141,9 +131,7 @@
     <priority>0.7</priority>
   </url>
 
-  <!-- ======================================================= -->
-  <!-- 6. TRUST, LEGAL & SITE INDEX PAGES                      -->
-  <!-- ======================================================= -->
+  <!-- Trust, Legal & Sitemap Pages -->
   <url>
     <loc>https://cubicyardhub.com/sitemap.html</loc>
     <lastmod>2026-09-18</lastmod>
