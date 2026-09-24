@@ -1,6 +1,0 @@
-{
-  "name": "CubicYardHub — Material & Takeoff Calculator",
-  "description": "Universal cubic yard, tonnage, retail bag count, and vehicle hauling payload safety takeoff calculator for concrete, gravel, dirt, sand, and landscaping.",
-  "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
-}
