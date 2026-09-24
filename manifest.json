@@ -1,0 +1,20 @@
+{
+  "short_name": "CubicYardHub",
+  "name": "Cubic Yard Hub \u2014 Material Volume & Tonnage Calculator",
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#ffffff",
+  "theme_color": "#1e3a8a",
+  "display": "standalone"
+}
