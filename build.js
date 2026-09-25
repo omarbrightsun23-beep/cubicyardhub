@@ -9,9 +9,7 @@ if (!fs.existsSync(distDir)) {
 function copyRecursive(src, dest) {
   const stats = fs.statSync(src);
   if (stats.isDirectory()) {
-    if (!fs.existsSync(dest)) {
-      fs.mkdirSync(dest, { recursive: true });
-    }
+    if (!fs.existsSync(dest)) fs.mkdirSync(dest, { recursive: true });
     fs.readdirSync(src).forEach(child => {
       copyRecursive(path.join(src, child), path.join(dest, child));
     });
@@ -20,18 +18,12 @@ function copyRecursive(src, dest) {
   }
 }
 
-const itemsToCopy = ['css', 'js', 'materials', 'converters', 'assets'];
-
-// Copy directories
-itemsToCopy.forEach(dir => {
+['css', 'js', 'materials', 'converters', 'assets'].forEach(dir => {
   const src = path.join(__dirname, dir);
   const dest = path.join(distDir, dir);
-  if (fs.existsSync(src)) {
-    copyRecursive(src, dest);
-  }
+  if (fs.existsSync(src)) copyRecursive(src, dest);
 });
 
-// Copy root files
 fs.readdirSync(__dirname).forEach(file => {
   if (file !== 'dist' && file !== 'node_modules' && !file.startsWith('.')) {
     const src = path.join(__dirname, file);

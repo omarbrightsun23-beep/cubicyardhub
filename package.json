@@ -4,6 +4,6 @@
   "private": true,
   "description": "Cubic Yard Hub - Material Volume & Tonnage Calculator",
   "scripts": {
-    "build": "echo \"Static build complete\""
+    "build": "node build.js"
   }
 }
