@@ -39,26 +39,56 @@
     {
       "source": "/:slug*.html",
       "destination": "/:slug*",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.cubicyardhub.com"
+        }
+      ],
       "permanent": true
     },
     {
       "source": "/materials/dirt-calculator",
       "destination": "/dirt-calculator",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.cubicyardhub.com"
+        }
+      ],
       "permanent": true
     },
     {
       "source": "/materials/mulch-calculator",
       "destination": "/mulch-calculator",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.cubicyardhub.com"
+        }
+      ],
       "permanent": true
     },
     {
       "source": "/materials/sand-calculator",
       "destination": "/sand-calculator",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.cubicyardhub.com"
+        }
+      ],
       "permanent": true
     },
     {
       "source": "/converters/yards-to-tons-calculator",
       "destination": "/yards-to-tons",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.cubicyardhub.com"
+        }
+      ],
       "permanent": true
     }
   ]
