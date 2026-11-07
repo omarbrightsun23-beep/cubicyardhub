@@ -4,6 +4,39 @@
   "trailingSlash": false,
   "redirects": [
     {
+      "destination": "https://www.cubicyardhub.com/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "cubicyardhub.com"
+        }
+      ],
+      "permanent": true,
+      "source": "/:path*.html"
+    },
+    {
+      "destination": "https://www.cubicyardhub.com/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "cubicyardhub.com"
+        }
+      ],
+      "permanent": true,
+      "source": "/:path*/"
+    },
+    {
+      "destination": "https://www.cubicyardhub.com/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "cubicyardhub.com"
+        }
+      ],
+      "permanent": true,
+      "source": "/:path*"
+    },
+    {
       "source": "/:slug*.html",
       "destination": "/:slug*",
       "permanent": true
